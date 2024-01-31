@@ -1,0 +1,32 @@
+﻿
+    <div ng-controller="app.views.carr.index as vm">
+        <div class="block-header">
+            <h2>Car</h2>
+        </div>
+
+
+
+        <div class="body table-responsive" ng-if="vm.carr.length > 0">
+            <table class="table table-responsive table-striped">
+                <thead>
+                    <tr>
+                        <th>@L("CarName")</th>
+                        <th>@L("CarPrice")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="items in vm.carr">
+                        <td>{{items.carName}}</td>
+                        <td>{{items.carPrice}}</td>
+                        <td>
+                            <button type="button" class="glyphicon glyphicon-edit" ng-click="vm.editdata(items)"></button>
+                            <button type="button" class="glyphicon glyphicon-arrow-down" ng-click="vm.deletedata(items)"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+

@@ -1,0 +1,37 @@
+﻿@*<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Department</title>
+</head>
+<body>*@
+    <div ng-controller="app.views.depart.index as vm">
+    <div class="block-header">
+        <h2>Department</h2>
+    </div>
+
+   
+
+    <div class="body table-responsive" ng-if="vm.depart.length > 0">
+        <table class="table table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>@L("DeparmentName")</th>
+                    <th>@L("EmployeeCount")</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="items in vm.depart">
+                    <td>{{items.departmentName}}</td>
+                    <td>{{items.employeeCount}}</td>
+                    <td>
+                        <button type="button" class="glyphicon glyphicon-edit" ng-click="vm.editdata(items)"></button>
+                        <button type="button" class="glyphicon glyphicon-arrow-down" ng-click="vm.deletedata(items)"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@*</body>
+</html>*@
